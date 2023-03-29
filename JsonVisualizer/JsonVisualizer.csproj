@@ -2,6 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
+        <PackageId>JsonVisualizer</PackageId>
+        <Version>0.0.1</Version>
+        <Authors>nemo048</Authors>
+        <Description>JsonVisualizer is a user-friendly library that turns JSON data into clear images, making it easy to understand and analyze complex structures at a glance.</Description>
+        
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
