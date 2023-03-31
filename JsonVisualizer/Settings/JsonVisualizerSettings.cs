@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Reflection;
+using System.Text.Json.Serialization;
 using SkiaSharp;
 
 namespace JsonVisualizer.Settings;
@@ -42,7 +43,7 @@ public sealed class JsonVisualizerSettings
         JsonVisualizerPaletteSettings? palette = null,
         float? textSize = null,
         float? padding = null,
-        SKTypeface typeface = null,
+        SKTypeface? typeface = null,
         bool? isAntialias = null)
     {
         return new JsonVisualizerSettings(
@@ -58,8 +59,18 @@ public sealed class JsonVisualizerSettings
     public static readonly JsonVisualizerSettings Default =
         new(textSize: 32.0f,
             padding: 10.0f,
-            SKTypeface.FromFile("Fonts/JetBrainsMonoNL-Medium.ttf"),
+            GetDefaultTypeface(),
             isAntialias: true);
+
+    private static SKTypeface GetDefaultTypeface()
+    {
+        Assembly assembly = Assembly.GetExecutingAssembly();
+
+        using (Stream resourceStream = assembly.GetManifestResourceStream(@"JsonVisualizer.Fonts.JetBrainsMonoNL-Medium.ttf"))
+        {
+            return SKTypeface.FromStream(resourceStream);
+        }
+    }
 
     #endregion
 }
