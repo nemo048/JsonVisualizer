@@ -3,9 +3,11 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <PackageId>JsonVisualizer</PackageId>
-        <Version>0.0.3</Version>
+        <Version>0.0.4</Version>
         <Authors>nemo048</Authors>
         <Description>JsonVisualizer is a user-friendly library that turns JSON data into clear images, making it easy to understand and analyze complex structures at a glance.</Description>
+        <RepositoryUrl>https://github.com/nemo048/JsonVisualizer.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
         
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>

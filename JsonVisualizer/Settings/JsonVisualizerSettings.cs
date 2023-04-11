@@ -85,19 +85,19 @@ public sealed class JsonVisualizerPaletteSettings
     public string NullColor { get; }
 
     public JsonVisualizerPaletteSettings(
-        string backgroundColor,
-        string stringColor,
-        string numberColor,
-        string booleanColor,
-        string delimiterColor,
-        string nullColor)
+        string? backgroundColor,
+        string? stringColor,
+        string? numberColor,
+        string? booleanColor,
+        string? delimiterColor,
+        string? nullColor)
     {
-        BackgroundColor = backgroundColor;
-        StringColor = stringColor;
-        NumberColor = numberColor;
-        BooleanColor = booleanColor;
-        DelimiterColor = delimiterColor;
-        NullColor = nullColor;
+        BackgroundColor = backgroundColor ?? Default.BackgroundColor;
+        StringColor = stringColor ?? Default.StringColor;
+        NumberColor = numberColor ?? Default.NumberColor;
+        BooleanColor = booleanColor ?? Default.BooleanColor;
+        DelimiterColor = delimiterColor ?? Default.DelimiterColor;
+        NullColor = nullColor ?? Default.NullColor;
     }
 
     #region Default
