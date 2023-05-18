@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <PackageId>JsonVisualizer</PackageId>
-        <Version>0.0.5</Version>
+        <Version>0.0.6</Version>
         <Authors>nemo048</Authors>
         <Description>JsonVisualizer is a user-friendly library that turns JSON data into clear images, making it easy to understand and analyze complex structures at a glance.</Description>
         <RepositoryUrl>https://github.com/nemo048/JsonVisualizer.git</RepositoryUrl>
@@ -15,7 +15,7 @@
 
     <ItemGroup>
       <PackageReference Include="SkiaSharp" Version="2.88.3" />
-      <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.3" />
+      <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.3" />
     </ItemGroup>
     
     <ItemGroup>
